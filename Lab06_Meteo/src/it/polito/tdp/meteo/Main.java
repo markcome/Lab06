@@ -16,8 +16,10 @@ public class Main extends Application {
 			Scene scene = new Scene(root);
 			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 
+			// Imposto il controller con il modello
 			MeteoController controller = loader.getController();
-			// TODO impostare il model nel controller
+			Model model = new Model();
+			controller.setModel(model);
 
 			primaryStage.setScene(scene);
 			primaryStage.show();
